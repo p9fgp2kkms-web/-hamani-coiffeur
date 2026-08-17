@@ -126,4 +126,82 @@ if ("serviceWorker" in navigator) {
 <script>
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}
 </script>
-</body></html>
+</body><!-- خانة تحميل التطبيق -->
+<div id="downloadApp" style="
+position:fixed;
+bottom:15px;
+left:15px;
+right:15px;
+background:#111;
+color:white;
+padding:18px;
+border-radius:18px;
+text-align:center;
+z-index:9999;
+box-shadow:0 5px 25px rgba(0,0,0,.5);
+font-family:Arial,sans-serif;
+">
+
+<h3 style="margin:0 0 8px;">
+📱 Hamani Coiffeur
+</h3>
+
+<p style="margin:0 0 15px;color:#ccc;">
+Téléchargez notre application
+</p>
+
+<button id="installButton" style="
+width:100%;
+padding:13px;
+border:0;
+border-radius:10px;
+background:#25D366;
+color:white;
+font-size:16px;
+font-weight:bold;
+">
+📲 Télécharger l'application
+</button>
+
+<button onclick="document.getElementById('downloadApp').style.display='none'"
+style="
+margin-top:8px;
+background:none;
+border:0;
+color:#aaa;
+">
+Plus tard
+</button>
+
+</div>
+
+<script>
+let installPrompt;
+
+window.addEventListener("beforeinstallprompt", function(e) {
+  e.preventDefault();
+  installPrompt = e;
+});
+
+document.getElementById("installButton").addEventListener("click", async function() {
+
+  if (installPrompt) {
+
+    installPrompt.prompt();
+
+    await installPrompt.userChoice;
+
+    installPrompt = null;
+
+  } else {
+
+    alert(
+      "Pour installer Hamani Coiffeur :\n\n" +
+      "Android : Menu ⋮ → Ajouter à l'écran d'accueil\n\n" +
+      "iPhone : Partager ⬆️ → Ajouter à l'écran d'accueil"
+    );
+
+  }
+
+});
+</script></html>
