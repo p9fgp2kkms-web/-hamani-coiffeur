@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="manifest" href="manifest.json">
+<title>Hamani Coiffeur</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:520px;margin:auto;min-height:100vh;background:linear-gradient(180deg,#0b0b0b,#171108)}
+header{text-align:center;padding:58px 22px 34px;background:radial-gradient(circle at top,#3b2b0d,#0b0b0b 65%);border-bottom:1px solid #4b3713}
+.logo{font-size:34px;font-weight:800;letter-spacing:4px;color:#d9a93b}.sub{letter-spacing:5px;margin-top:5px}.tag{color:#d9a93b;margin-top:12px;font-style:italic}
+section{padding:22px}.title{font-size:21px;font-weight:750;margin-bottom:14px}.card{padding:17px;margin:10px 0;border:1px solid #584116;border-radius:18px;background:#111;display:flex;justify-content:space-between;align-items:center}.card h3{margin:0 0 5px}.card p{margin:0;color:#999}.price{font-size:25px;font-weight:800;color:#d9a93b}.buttons{display:grid;gap:11px}.btn{padding:16px;border-radius:16px;text-align:center;text-decoration:none;color:#fff;background:#151515;border:1px solid #604617;font-weight:700}.gold{background:#d9a93b;color:#111;border-color:#d9a93b}.heroimg{height:190px;border-radius:20px;border:1px solid #5a4217;background:linear-gradient(135deg,#3a2a0e,#101010 55%,#2a1d09);display:flex;align-items:center;justify-content:center;color:#d9a93b;font-size:26px;font-weight:800;letter-spacing:3px}
+footer{text-align:center;color:#777;padding:25px;font-size:12px}
+</style>
+</head>
+<body>
+<main>
+<header><div class="logo">✂ HAMANI</div><div class="sub">COIFFEUR</div><div class="tag">Style. Votre Signature.</div></header>
+<section><div class="heroimg">HAMANI COIFFEUR</div></section>
+<section><div class="title">✂ Services</div>
+<div class="card"><div><h3>Dégradé</h3><p>Coupe moderne et soignée</p></div><div class="price">400 DA</div></div>
+<div class="card"><div><h3>Barbe</h3><p>Taille et entretien</p></div><div class="price">200 DA</div></div></section>
+<section><div class="title">📅 Prendre rendez-vous</div>
+<div class="buttons">
+<a class="btn gold" href="https://wa.me/213793715669?text=Bonjour%20Hamani%20Coiffeur%2C%20je%20voudrais%20prendre%20rendez-vous." target="_blank">💬 Prendre rendez-vous</a>
+<a class="btn" href="tel:+213793715669">📞 07 93 71 56 69</a>
+<a class="btn" href="https://maps.app.goo.gl/GHNNjwH8pwJG8Dg38?g_st=ic" target="_blank">📍 Localisation</a>
+</div></section>
+<section><div class="title">📸 Galerie</div><p style="color:#999">Les photos réelles du salon pourront être ajoutées plus tard.</p></section>
+<footer>© 2026 Hamani Coiffeur</footer>
+</main>
+<script>
+if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}
+</script>
+</body></html>
