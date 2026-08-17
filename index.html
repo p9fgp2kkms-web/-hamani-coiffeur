@@ -126,44 +126,44 @@ if ("serviceWorker" in navigator) {
 <script>
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}
 </script>
-</body><!-- خانة تحميل التطبيق -->
-<div id="downloadApp" style="
+</body><div style="
 position:fixed;
 bottom:15px;
 left:15px;
 right:15px;
 background:#111;
 color:white;
-padding:18px;
+padding:20px;
 border-radius:18px;
 text-align:center;
-z-index:9999;
-box-shadow:0 5px 25px rgba(0,0,0,.5);
+z-index:99999;
+box-shadow:0 5px 25px rgba(0,0,0,.6);
 font-family:Arial,sans-serif;
 ">
 
-<h3 style="margin:0 0 8px;">
-📱 Hamani Coiffeur
-</h3>
+<div style="font-size:20px;font-weight:bold;">
+📱 HAMANI COIFFEUR
+</div>
 
-<p style="margin:0 0 15px;color:#ccc;">
+<div style="margin:8px 0 15px;color:#ddd;">
 Téléchargez notre application
-</p>
+</div>
 
-<button id="installButton" style="
+<button onclick="alert('📱 Android : Menu ⋮ → Ajouter à l’écran d’accueil\\n\\n🍎 iPhone : Partager ⬆️ → Ajouter à l’écran d’accueil')"
+style="
 width:100%;
-padding:13px;
-border:0;
-border-radius:10px;
+padding:14px;
 background:#25D366;
 color:white;
-font-size:16px;
+border:0;
+border-radius:10px;
+font-size:17px;
 font-weight:bold;
 ">
 📲 Télécharger l'application
 </button>
 
-<button onclick="document.getElementById('downloadApp').style.display='none'"
+<button onclick="this.parentElement.style.display='none'"
 style="
 margin-top:8px;
 background:none;
@@ -173,35 +173,4 @@ color:#aaa;
 Plus tard
 </button>
 
-</div>
-
-<script>
-let installPrompt;
-
-window.addEventListener("beforeinstallprompt", function(e) {
-  e.preventDefault();
-  installPrompt = e;
-});
-
-document.getElementById("installButton").addEventListener("click", async function() {
-
-  if (installPrompt) {
-
-    installPrompt.prompt();
-
-    await installPrompt.userChoice;
-
-    installPrompt = null;
-
-  } else {
-
-    alert(
-      "Pour installer Hamani Coiffeur :\n\n" +
-      "Android : Menu ⋮ → Ajouter à l'écran d'accueil\n\n" +
-      "iPhone : Partager ⬆️ → Ajouter à l'écran d'accueil"
-    );
-
-  }
-
-});
-</script></html>
+</div></html>
