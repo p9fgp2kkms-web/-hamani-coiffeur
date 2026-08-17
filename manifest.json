@@ -1,10 +1,9 @@
 {
   "name": "Hamani Coiffeur",
   "short_name": "Hamani",
+  "description": "Hamani Coiffeur - Réservation en ligne",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#080808",
-  "theme_color": "#0b0b0b",
-  "lang": "fr",
-  "icons": []
+  "background_color": "#111111",
+  "theme_color": "#111111"
 }
